@@ -137,9 +137,7 @@ class _MyHomePageState extends State<MyHomePage>
                               aspectRatio: _controller.value.aspectRatio,
                               child: RepaintBoundary(
                                 key: topCaptureKey,
-                                child: Texture(
-                                  textureId: _controller.textureId,
-                                ),
+                                child: VideoPlayer(_controller),
                               ),
                             )
                           : Container(),
