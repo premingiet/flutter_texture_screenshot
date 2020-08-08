@@ -1,16 +1,22 @@
 # flutter_texture_screenshot
 
-A new Flutter application.
+This is a flutter app to test bug in flutter texture widget. Because of this bug, screenshot of texture widget returns null image.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Run pub get inside the project to fetch all dependencies in pubspec.yaml file
+1. Run the app in an android device and make sure internet is there
+1. Now as app starts, press the middle play button and the video will start playing
+1. Now press the 1st button called "Top Capture" and this should capture the texture widget screenshot
+1. Now try to press the 3rd button called "Mid Capture" and this should capture the color changing animated container widget screenshot
+1. Preview the screenshot in the "Preview Captured Screenshot Container".
 
-A few resources to get you started if this is your first Flutter project:
+> Bug here is
+-----------
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Pressing "Top Capture" button, returns null screenshot image of texture widget, but pressing "Mid Capture" button returns the screenshot of animated container widget.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> What should actually happen 
+----------------------------
+
+Pressing "Top Capture" button, should take screenshot of video playing.
